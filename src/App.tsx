@@ -2,7 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { Card, Container, MantineProvider, Text, Title } from "@mantine/core";
+import { Button, Card, Container, MantineProvider, Text, Title, Image } from "@mantine/core";
+import { Carousel } from '@mantine/carousel';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,25 +11,33 @@ function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
       <Container>
-        <div>
-          <a href="https://vitejs.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://reactjs.org" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <Title order={1}>Vite + React</Title>
+
+
+
+    <Image maw={240} mx="auto" radius="md" src="/girlsday-portfolio-mariella/GirlsDay-2.jpg" alt="Profil Image" />
+    <Text size={100}>Mariella </Text>
+    <Carousel slideSize="70%" height={200} slideGap="xl" controlsOffset="md" controlSize={30} loop draggable={false}>
+      {/* ...slides */}
+      <Carousel.Slide> <Image maw={240} mx="auto" radius="md" src="/girlsday-portfolio-mariella/GirlsDay-3.jpg" alt="Profil Image" /></Carousel.Slide>
+      <Carousel.Slide> <Text size={50}>wir...</Text></Carousel.Slide>
+      <Carousel.Slide> <Text size={50}>beobachten...</Text></Carousel.Slide>
+      <Carousel.Slide> <Text size={50}>DICH!!!</Text></Carousel.Slide>
+    </Carousel>
+
+
+
         <Card mt="xl">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
+          
           <Text mt="sm">
-            Edit <code>src/App.tsx</code> and save to test HMR
+            
           </Text>
         </Card>
+        <Button color="red" radius="xs" size="md">
+      DRÜCK MICH 
+    </Button>
         <Text mt="md" c="dimmed">
-          Click on the Vite and React logos to learn more
+          Meine Hobbys...
+          Hobby los sein :) 
         </Text>
       </Container>
     </MantineProvider>
