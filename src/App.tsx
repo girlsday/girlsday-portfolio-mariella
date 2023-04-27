@@ -1,8 +1,6 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import { Button, Card, Container, MantineProvider, Text, Title, Image, Center, Group, Stack, Grid, Flex } from "@mantine/core";
+import { Button, Card, Container, MantineProvider, Text, Image, Center, Group, Flex } from "@mantine/core";
 import { Carousel } from '@mantine/carousel';
 
 function App() {
@@ -33,24 +31,23 @@ function App() {
               <Button m={"md"} color="red" radius="xs" size="md" onClick={()=> {alert("COOL das DU mich gedrückt hast!!!!!")}}>DRÜCK MICH</Button>
             </Center>
           </Group>
-  
-          
                 </Flex>
-                
-        
+                <Container mt={30} mb={50}>
+                <Flex 
+          direction={{ base: 'column', sm: 'row' }}
+          gap={{ base: 'sm', sm: 'lg' }}
+          justify={{sm: 'center' }}
+          align={"center"}>
+            <Group position="center">
+            <Image mt={8} miw={350} maw={350} src={"/girlsday-portfolio-mariella/GirlsDay-4.jpg"}></Image>
+            <Image maw={200} src={"/girlsday-portfolio-mariella/GirlsDay-7.jpg"}></Image>
+
+              </Group>                  
+                </Flex>
+            </Container>
 
 
-      <Grid justify="center" my={60}>
-        <Grid.Col span={4}>
-          <Image mt={8} miw={200} src={"/girlsday-portfolio-mariella/GirlsDay-4.jpg"}></Image>
-        </Grid.Col>
-        <Grid.Col span={2}>
-        <Image src={"/girlsday-portfolio-mariella/GirlsDay-7.jpg"}></Image>
-      
-        </Grid.Col>
-      </Grid>
-
-    <Carousel slideSize="70%"  slideGap="xl" controlsOffset={500} controlSize={30} loop draggable={false}>
+    <Carousel slideSize="70%"  slideGap="xl" controlSize={30} loop draggable={false}>
       {/* ...slides */}
       <Carousel.Slide> <Image maw={240} mx="auto" radius="md" src="/girlsday-portfolio-mariella/GirlsDay-3.jpg" alt="Profil Image" /></Carousel.Slide>
       <Carousel.Slide> <Image fit="scale-down" height={"350"} radius="md" src="/girlsday-portfolio-mariella/IMG_0347.jpg" alt="Profil Image" /></Carousel.Slide>
